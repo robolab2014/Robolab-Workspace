@@ -1,0 +1,139 @@
+@(maze: String, path: Seq[tud.robolab.model.WayElement], id: String, testResult: Boolean, testHead: String, testResults: Seq[(Boolean,String)], testBench: String)
+
+@import tud.robolab.model.WayElement
+@import tud.robolab.model.TestMessage
+
+@main(title = "Robolab - Test results") {
+<!--
+  ~ RobolabSim
+  ~ Copyright (C) 2014  Max Leuthaeuser
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see [http://www.gnu.org/licenses/].
+  -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2">
+            <h2>Control</h2>
+
+            <p>
+                <a data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" href="/runtest?id=@id">Run
+                    tests again</a>
+                <a data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true" href="/reset?id=@id">Reset</a>
+                <a data-role="button" data-icon="arrow-l" data-iconpos="right" data-mini="true" href="/">Back</a>
+            </p>
+        </div>
+
+        <div class="col-lg-3" style="margin-left:50px;">
+            <h2>Map</h2>
+
+            <p>
+
+            <div class="source-code">
+                <font face="Courier New">
+                    @Html(maze)
+                </font>
+            </div>
+            </p>
+
+            <h2>Path</h2>
+
+            <p>
+
+            <div class="source-code">
+                <ul class="noindent">
+                    @if(path.isEmpty) {
+                    *** No path was driven yet ***
+                    } else {
+                    @path.map{ e =>
+                    <li>[@e.time] x: <b>@e.x</b> y: <b>@e.y</b>
+                        @if(e.token) {
+                        &nbsp;(T)
+                        }
+                    </li>
+                    }
+                    }
+                </ul>
+            </div>
+            </p>
+        </div>
+
+        <div class="col-lg-6">
+            <h2>Test result</h2>
+
+            <p>Group: @id</p>
+
+            @if(!testResults.isEmpty) {
+            <p>
+                Overall test result:
+                @if(testResult) {
+                <span style="color:green"> Okay</span>
+                } else {
+                <span style="color:red"> Failed</span>
+                }
+            </p>
+            }
+
+            <p>
+            @Html(testHead)
+
+            @if(!testResults.isEmpty) {
+            <div class="scrollable">
+            <table class="table">
+                <colgroup>
+                    <col span="1">
+                </colgroup>
+                <thead>
+                <tr>
+                    <th style="width=20%">Result</th>
+                    <th>Description</th>
+                </tr>
+                </thead>
+                <tbody>
+
+                @testResults.map{ c =>
+                <tr>
+                    <td>
+                        @if(!c._1) {
+                        <span style="color:green">Okay</span>
+                        } else {
+                        <span style="color:red">Failed</span>
+                        }
+                    </td>
+                    <td>
+                        @Html(c._2)
+                    </td>
+                </tr>
+                }
+                </tbody>
+            </table>
+            </div>
+            }
+
+            @Html(testBench)
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; Max Leuthäuser 2014</p>
+    </footer>
+</div>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+}

@@ -1,0 +1,57 @@
+@(id: String)
+
+@main(title = "Robolab - Running the tests") {
+<!--
+  ~ RobolabSim
+  ~ Copyright (C) 2014  Max Leuthaeuser
+  ~
+  ~ This program is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ This program is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see [http://www.gnu.org/licenses/].
+  -->
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-4">
+            <h2>Running the tests...</h2>
+
+            <p id="finished" style="display: none">
+                <a style="width: 50%" data-role="button" data-icon="arrow-r" data-iconpos="right" data-mini="true"
+                   href="/gettest?id=@id">See test results</a>
+            </p>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <p>&copy; Max Leuthäuser 2014</p>
+    </footer>
+</div>
+
+<script src="js/vendor/bootstrap.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<script>
+setTimeout(function() {
+    $.mobile.loading('show');
+    setTimeout(function() {
+        $("#finished").show();
+        $.mobile.loading('hide');
+        $.mobile.changePage("/gettest?id=@id");
+    }, 5000);
+}, 20);
+
+
+</script>
+}
