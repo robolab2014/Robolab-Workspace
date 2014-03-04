@@ -20,6 +20,8 @@ void hello_world() {
 	display_update();
 }
 
+/*JO */
+
 TASK(OSEK_Main_Task) {
 	while (1) {
 		hello_world();
