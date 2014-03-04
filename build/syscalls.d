@@ -1,0 +1,23 @@
+build/syscalls.o: \
+ /Applications/robolab/nxtOSEK/ecrobot/../ecrobot/c/syscalls.c \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/stdlib.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/machine/ieeefp.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/_ansi.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/newlib.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/sys/config.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/sys/features.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/include/stddef.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/sys/reent.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/_ansi.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/sys/_types.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/machine/_types.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/machine/_default_types.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/sys/lock.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/machine/stdlib.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/alloca.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/reent.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/machine/types.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/sys/stat.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/time.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/machine/time.h \
+ /Applications/robolab/yagarto-4.6.2/bin/../lib/gcc/arm-none-eabi/4.6.2/../../../../arm-none-eabi/sys-include/sys/types.h
