@@ -15,7 +15,7 @@ void ecrobot_device_terminate(void) {
 void hello_world() {
 	display_clear(0);
 	display_goto_xy(3,2);
-	display_string("Lichtwert aktuell: ");
+	display_string("Lichtwert: ");
 	display_int(ecrobot_get_light_sensor(NXT_PORT_S3), 4);
 	display_update();
 }
